@@ -13,6 +13,9 @@ export const state = () => ({
     pictureUrl: null,
     displayName: null,
     userId: null
+  },
+  lineleff: {
+    isInClient: false,
   }
 });
 
@@ -22,7 +25,10 @@ export const getters = {
   },
   getLine(state) {
     return state.line;
-  }
+  },
+  getLineLeff(state) {
+    return state.lineleff;
+  },
 };
 
 export const mutations = {
@@ -37,6 +43,12 @@ export const mutations = {
       ...state.line,
       ...data
     };
+  },
+  SET_LINE_LIFF(state, data) {
+    state.line = {
+      ...state.lineleff,
+      ...data
+    };
   }
 };
 
@@ -47,5 +59,9 @@ export const actions = {
 
   setLine({ commit }, data) {
     commit("SET_LINE", data);
+  },
+
+  setLineLeff({ commit }, data){
+    commit("SET_LINE_LIFF", data);
   }
 };

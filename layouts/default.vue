@@ -1,5 +1,5 @@
 <template>
-  <div id="app-store-front" class="container relative mx-auto min-h-screen bg-white pb-nav">
+  <div id="app-store-front" class="container relative mx-auto min-h-screen">
     <nuxt />
   </div>
 </template>
